@@ -1,0 +1,11 @@
+{% extends 'tasks/base.html' %} {% block content %}
+<div class="todo-app">
+        <h2>Task өөрчлөх </h2>
+        <form method="post">
+            <div class="row">
+            {% csrf_token %}
+            {{ form.title }}
+            <button type="submit">Өөрчлөх</button></div>
+        </form>
+</div>
+{% endblock %}
